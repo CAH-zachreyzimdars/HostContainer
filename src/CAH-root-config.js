@@ -22,7 +22,7 @@ import { registerApplication, start } from "single-spa";
 
 registerApplication(
     '@CAH/todo',
-    () => import('@CAH/todo'),
+    () => import('../../Todo-app/todo/src/index.js'),
     (location) => location.pathname.startsWith('/')
 );
 

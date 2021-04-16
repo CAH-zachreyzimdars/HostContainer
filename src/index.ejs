@@ -47,8 +47,11 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@CAH/root-config": "https://localhost:9000/CAH-root-config.js",
-        "@CAH/todo": "https://localhost:3001/index.js"
+        "@CAH/root-config": "//localhost:3000/container",
+        "@CAH/todo": "//localhost:3000/todo",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
       }
     }
   </script>
