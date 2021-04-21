@@ -47,8 +47,8 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@CAH/root-config": "//localhost:3000/container",
-        "@CAH/todo": "//localhost:3000/todo",
+        "@CAH/root-config": "./CAH-root-config.js",
+        "@CAH/todo": "http://localhost:3000/todo",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
@@ -79,5 +79,6 @@
     System.import('@CAH/todo');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <div id="single-spa-application:@CAH/todo"></div>
 </body>
 </html>

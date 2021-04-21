@@ -1,4 +1,5 @@
 import { registerApplication, start } from "single-spa";
+import todo from "../../Todo-app/todo/src/index";
 // import {
 //   constructApplications,
 //   constructRoutes,
@@ -22,7 +23,8 @@ import { registerApplication, start } from "single-spa";
 
 registerApplication(
     '@CAH/todo',
-    () => import('../../Todo-app/todo/src/index.js'),
+    () => import('@CAH/todo'),
+    // () => import('../../Todo-app/todo/src/index.js'),
     (location) => location.pathname.startsWith('/')
 );
 
