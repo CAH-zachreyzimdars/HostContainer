@@ -48,7 +48,7 @@
     {
       "imports": {
         "@CAH/root-config": "./CAH-root-config.js",
-        "@CAH/todo": "//localhost:3000/todo",
+        "@CAH/todo": "http://localhost:8080/CAH-todospa.js",
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
@@ -71,14 +71,27 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
-
+  <template id="single-spa-layout">
+    <single-spa-router>
+      <!-- <nav class="topnav">
+        <application name="@react-mf/navbar" loader="topNav" error="topNav"></application>
+      </nav> -->
+      <div class="main-content mt-16">
+        <route path="todo">
+          <application name="@CAH/todo"></application>
+        </route>
+        <route default>
+          <!-- <application name="@CAH/todo"></application> -->
+        </route>
+      </div>
+    </single-spa-router>
+  </template>
 </head>
 <body>
   <script>
     System.import('@CAH/root-config');
-    System.import('@CAH/todo');
+    // System.import('@CAH/todo');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
-  <div id="cah-todo"></div>
 </body>
 </html>

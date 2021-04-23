@@ -1,5 +1,4 @@
 import { registerApplication, start } from "single-spa";
-// import todo from "../../Todo-app/todo/src/index";
 import {
   constructApplications,
   constructRoutes,
