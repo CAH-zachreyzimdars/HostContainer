@@ -72,25 +72,11 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
   <template id="single-spa-layout">
-    <single-spa-router>
-      <!-- <nav class="topnav">
-        <application name="@react-mf/navbar" loader="topNav" error="topNav"></application>
-      </nav> -->
-      <div class="main-content mt-16">
-        <route path="todo">
-          <application name="@CAH/todo"></application>
-        </route>
-        <route default>
-          <!-- <application name="@CAH/todo"></application> -->
-        </route>
-      </div>
-    </single-spa-router>
   </template>
 </head>
 <body>
   <script>
     System.import('@CAH/root-config');
-    // System.import('@CAH/todo');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
