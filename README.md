@@ -1,5 +1,5 @@
 # HostContainer
-`git clone` this repository, the ContainerProxy repository and the cah-todo-spa repository
+`git clone` this repository, the ContainerProxy(https://github.com/CAH-zachreyzimdars/ContainerProxy.git) repository and the cah-todo-spa(https://github.com/CAH-zachreyzimdars/cah-spa-todo.git) repository
 
 run `npm install` on each repository
 `npm start` each repository
